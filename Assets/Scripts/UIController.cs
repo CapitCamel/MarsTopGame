@@ -5,9 +5,11 @@ using UnityEngine.UI;
 
 
 public class UIController : MonoBehaviour {
-	public Text CoinsText;
 
-	void Update () {
+    public Text CoinsText;
+   
+
+    void Update () {
 		CoinsText.text =GameManeger.coins.ToString ();
 	}
 }

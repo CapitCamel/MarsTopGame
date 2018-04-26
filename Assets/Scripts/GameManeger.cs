@@ -13,7 +13,7 @@ public class GameManeger : MonoBehaviour {
 	}
 
 	void Update () {
-		DontDestroyOnLoad (this.gameObject);
+		//DontDestroyOnLoad (this.gameObject);
 	
 		if (dead) {
 			SceneManager.LoadScene (0);

@@ -22,7 +22,7 @@ public class grabberscript : MonoBehaviour {
 			if (!grabbed) {
 
                 Physics2D.queriesStartInColliders = false;
-                hit = Physics2D.Raycast(transform.position, Vector2.right * transform.localScale.x*distance);
+                hit = Physics2D.Raycast(transform.position, Vector2.left * transform.localScale.x*distance);
 
                 if (hit.collider != null && hit.collider.tag == "Grabbeble") {
                     grabbed = true;
@@ -35,7 +35,7 @@ public class grabberscript : MonoBehaviour {
                 grabbed = false;
 
                 if (hit.collider.gameObject.GetComponent<Rigidbody2D>() != null) {
-                    hit.collider.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(transform.localScale.x, 1) * ThrowFose;
+                    hit.collider.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(transform.localScale.x, -1) * ThrowFose;
                 }
 			}
 		}
@@ -49,6 +49,6 @@ public class grabberscript : MonoBehaviour {
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawLine(transform.position, transform.position +  Vector3.right * transform.localScale.x*distance);
+        Gizmos.DrawLine(transform.position, transform.position +  Vector3.left * transform.localScale.x*distance);
     }
 }

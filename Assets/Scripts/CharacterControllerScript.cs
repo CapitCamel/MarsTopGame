@@ -7,7 +7,7 @@ public class CharacterControllerScript : MonoBehaviour {
 	//переменная для установки макс. скорости персонажа
 	public float maxSpeed = 10f; 
 	//переменная для определения направления персонажа вправо/влево
-	private bool isFacingRight = true;
+	private bool isFacingRight = false;
 	//ссылка на компонент анимаций
 	private Animator anim;
 	private Rigidbody2D rb;
@@ -72,7 +72,7 @@ public class CharacterControllerScript : MonoBehaviour {
 		//если перс на земле и нажат пробел
 		if(isGrounded && Input.GetKeyDown (KeyCode.Space)){
 			anim.SetBool ("Ground", false);
-			rb.AddForce (new Vector2 (0, 700));
+			rb.AddForce (new Vector2 (0, 900));
 		}
 
 	}
