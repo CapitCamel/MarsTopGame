@@ -17,6 +17,12 @@ public class GameHalper : MonoBehaviour {
     }
 
 
+    public void Start()
+    {
+        Load();
+    }
+
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
@@ -69,6 +75,11 @@ public class GameHalper : MonoBehaviour {
     }
 
     private void GenerateScene(XElement root) {
+
+        foreach (SavebleObject obj in objects)
+        {
+            obj.DestroySelf();
+        }
 
         foreach (XElement instance in root.Elements("instance"))
         {

@@ -37,4 +37,10 @@ public class SavebleObject : MonoBehaviour {
 
         return element;
     }
+
+
+    public void DestroySelf()
+    {
+        Destroy(gameObject);
+    }
 }

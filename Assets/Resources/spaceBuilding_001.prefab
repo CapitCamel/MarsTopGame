@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff7a92f8b7b625d4f87442145f7360c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectName: box
+  objectName: spaceBuilding_001
 --- !u!212 &212496228215841776
 SpriteRenderer:
   m_ObjectHideFlags: 1
