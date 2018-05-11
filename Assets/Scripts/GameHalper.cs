@@ -7,11 +7,11 @@ using System.IO;
 public class GameHalper : MonoBehaviour {
 
 
-    private string path;
+    public string path;
     public List<SavebleObject> objects = new List<SavebleObject>();
 
 
-    private void Awake()
+    public void Awake()
     {
         path = Application.persistentDataPath + "/testsave.xml";
     }
@@ -23,7 +23,7 @@ public class GameHalper : MonoBehaviour {
     }
 
 
-    private void Update()
+    public void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
             Save();
@@ -74,7 +74,31 @@ public class GameHalper : MonoBehaviour {
         GenerateScene(root);
     }
 
-    private void GenerateScene(XElement root) {
+    public void CreateNewGame()
+    {
+        XElement root = null;
+
+
+        if (File.Exists(Application.persistentDataPath + "/lavel.xml"))
+        {
+            root = XDocument.Parse(File.ReadAllText(Application.persistentDataPath + "/lavel.xml")).Element("root");
+        }
+
+        else
+        {
+            return;
+        }
+
+        if (root == null)
+        {
+            Debug.Log("Lavel Load Failed...");
+            return;
+        }
+
+        GenerateScene(root);
+    }
+
+    public void GenerateScene(XElement root) {
 
         foreach (SavebleObject obj in objects)
         {

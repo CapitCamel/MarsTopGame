@@ -923,6 +923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6a0c715f1f0d51488e8502d72557f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  path: 
   objects: []
 --- !u!1001 &934060017
 Prefab:
@@ -1279,6 +1280,11 @@ Prefab:
     - target: {fileID: 1212061224653832, guid: 3c99e64c694725546aeebfd5297485ff, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20390031518846688, guid: 3c99e64c694725546aeebfd5297485ff,
+        type: 2}
+      propertyPath: orthographic size
+      value: 11.075754
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3c99e64c694725546aeebfd5297485ff, type: 2}
@@ -1869,6 +1875,11 @@ Prefab:
     - target: {fileID: 4784192293696208, guid: 971704d4942b88045a0fd582f35404ec, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 61650903055564614, guid: 971704d4942b88045a0fd582f35404ec,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 2.65
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 971704d4942b88045a0fd582f35404ec, type: 2}
