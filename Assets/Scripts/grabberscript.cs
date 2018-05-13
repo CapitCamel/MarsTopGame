@@ -17,7 +17,11 @@ public class grabberscript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetKeyDown (KeyCode.F)) {
+        
+
+
+
+        if (Input.GetKeyDown (KeyCode.F)) {
 
 			if (!grabbed) {
 
@@ -40,10 +44,18 @@ public class grabberscript : MonoBehaviour {
 			}
 		}
 
+        
+
         if (grabbed)
         {
-            hit.collider.gameObject.transform.position = Holdpoint.position;
+                     
+                hit.collider.gameObject.transform.position = Holdpoint.position;
+                //Объект есть на сцене 
+      
+
         }
+
+
 	}
 
     private void OnDrawGizmos()
