@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarsTopGame", "Assembly-CSharp.csproj", "{DBEFE914-7737-7598-8853-11C9E5E43B50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarsTopGame", "Assembly-CSharp-Editor.csproj", "{626FBEBE-66C9-47FA-FEE8-D1080BDDB4C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DBEFE914-7737-7598-8853-11C9E5E43B50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBEFE914-7737-7598-8853-11C9E5E43B50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBEFE914-7737-7598-8853-11C9E5E43B50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBEFE914-7737-7598-8853-11C9E5E43B50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{626FBEBE-66C9-47FA-FEE8-D1080BDDB4C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{626FBEBE-66C9-47FA-FEE8-D1080BDDB4C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{626FBEBE-66C9-47FA-FEE8-D1080BDDB4C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{626FBEBE-66C9-47FA-FEE8-D1080BDDB4C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
