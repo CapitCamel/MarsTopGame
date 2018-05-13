@@ -56,6 +56,8 @@
      <Compile Include="Assets\Scripts\CharacterControllerScript.cs" />
      <Compile Include="Assets\Scripts\CoinScript.cs" />
      <Compile Include="Assets\Scripts\Data.cs" />
+     <Compile Include="Assets\Scripts\Dialogue.cs" />
+     <Compile Include="Assets\Scripts\DialogueSystem.cs" />
      <Compile Include="Assets\Scripts\DieScript.cs" />
      <Compile Include="Assets\Scripts\GameHalper.cs" />
      <Compile Include="Assets\Scripts\GameManeger.cs" />
