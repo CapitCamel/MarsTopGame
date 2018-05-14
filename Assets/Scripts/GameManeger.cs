@@ -9,15 +9,19 @@ public class GameManeger : MonoBehaviour {
 	public static bool dead;
     public static bool openDialogue;
     public static bool openTutor;
+    public static bool flashOn;
     public GameObject tutorPanel;
     public GameObject dialoguePanel;
+    public GameObject heroFlash;
 
 	void Start () {
 
         dialoguePanel = GameObject.Find("dialoguePanel");
         tutorPanel = GameObject.Find("tutorPanel");
+        heroFlash = GameObject.Find("heroLight");
         tutorPanel.SetActive(false);
         dialoguePanel.SetActive(false);
+        heroFlash.SetActive(false);
 
 	}
 
@@ -31,5 +35,10 @@ public class GameManeger : MonoBehaviour {
 
         dialoguePanel.SetActive(openDialogue);
         tutorPanel.SetActive(openTutor);
-	}
+        heroFlash.SetActive(flashOn);
+       
+
+    }
+
+
 }

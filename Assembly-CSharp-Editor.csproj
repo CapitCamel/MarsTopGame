@@ -52,6 +52,17 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\AutoSave\Editor\AutoSaveExtension.cs" />
+     <Compile Include="Assets\Light2D\Editor\Light2DMenu.cs" />
+     <Compile Include="Assets\Light2D\Editor\LightingSystemCreationWindow.cs" />
+     <Compile Include="Assets\Light2D\Editor\LightingSystemEditor.cs" />
+     <Compile Include="Assets\Light2D\Examples\Editor\BlockTilingInfoDrawer.cs" />
+     <Compile Include="Assets\Light2D\Examples\Editor\EditorCameraWindow.cs" />
+     <Compile Include="Assets\Light2D\Examples\Editor\HingeAutoRotatorEditor.cs" />
+     <Compile Include="Assets\Light2D\Examples\Editor\HingeJointUtil.cs" />
+     <Compile Include="Assets\Light2D\Examples\Editor\LandingLegEditor.cs" />
+     <Compile Include="Assets\Light2D\Examples\Editor\Point2Drawer.cs" />
+     <Compile Include="Assets\Light2D\Examples\Editor\ReadOnlyDrawer.cs" />
+     <Compile Include="Assets\Light2D\Examples\Editor\ScriptableObjectCreatorWindow.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Editor\CustomTiledImporterAttribute.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Editor\ICustomTiledImporter.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Editor\ImportTiled2Unity.cs" />
