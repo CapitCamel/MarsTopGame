@@ -9,10 +9,16 @@ public class grabberscript : MonoBehaviour {
     RaycastHit2D hit;
     public float distance= 0.7f;
     public float ThrowFose;
-	// Use this for initialization
-	void Start () {
-       
-	}
+
+    public AudioSource audioSource;
+    public AudioClip throwClip; //47
+    public AudioClip takeClip; //46
+    public float volume = 0.7f;
+
+    // Use this for initialization
+    void Start () {
+        audioSource = GetComponent<AudioSource>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -25,10 +31,13 @@ public class grabberscript : MonoBehaviour {
 
 			if (!grabbed) {
 
+                
+
                 Physics2D.queriesStartInColliders = false;
                 hit = Physics2D.Raycast(transform.position, Vector2.left * transform.localScale.x*distance);
 
                 if (hit.collider != null && hit.collider.tag == "Grabbeble") {
+                    audioSource.PlayOneShot(takeClip, volume);
                     grabbed = true;
                 }
 
@@ -36,6 +45,8 @@ public class grabberscript : MonoBehaviour {
 
             else
             {
+                audioSource.PlayOneShot(throwClip, volume);
+
                 grabbed = false;
 
                 if (hit.collider.gameObject.GetComponent<Rigidbody2D>() != null) {

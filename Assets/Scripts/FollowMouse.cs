@@ -10,12 +10,17 @@ public class FollowMouse : MonoBehaviour {
     public float moveSpeed = 0.004f;
     public bool flashOn = true;
     bool pressed;
+
+    public AudioSource audioSource;
+    public AudioClip onOffClip; //32
+    public float volume = 0.7f;
+
     // Use this for initialization
     void Start()
     {
         GM = GameObject.Find("GameManegger").GetComponent<GameManeger>();
         lightSource = GameObject.Find("heroLight");
-   
+        audioSource = GetComponent<AudioSource>();
 
     }
 
@@ -29,6 +34,9 @@ public class FollowMouse : MonoBehaviour {
         // transform.position = Vector2.Lerp(transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition), moveSpeed);
         if (Input.GetButtonDown("light") && !flashOn)
         {
+
+            audioSource.PlayOneShot(onOffClip, 0.5f);
+
             GameManeger.flashOn = true;
             flashOn = !flashOn;
             lightSource = GM.heroFlash;
@@ -52,7 +60,7 @@ public class FollowMouse : MonoBehaviour {
 
             if (Input.GetButtonDown("light") && flashOn && !pressed)
             {
-                
+                audioSource.PlayOneShot(onOffClip, volume);
                 flashOn = false;
                 GameManeger.flashOn = false;
                 

@@ -85,6 +85,7 @@
      <Compile Include="Assets\Light2D\Scripts\ObstacleCameraPostPorcessor.cs" />
      <Compile Include="Assets\Light2D\Scripts\Point2.cs" />
      <Compile Include="Assets\Light2D\Scripts\Util.cs" />
+     <Compile Include="Assets\Scripts\Ambient.cs" />
      <Compile Include="Assets\Scripts\CameraContrl.cs" />
      <Compile Include="Assets\Scripts\CharacterControllerScript.cs" />
      <Compile Include="Assets\Scripts\CoinScript.cs" />
