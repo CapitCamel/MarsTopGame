@@ -17,9 +17,9 @@ TagManager:
   - Ground
   - 
   - 
-  - 
-  - 
-  - 
+  - light sources
+  - ambient light
+  - light obstacles
   - 
   - 
   - 
