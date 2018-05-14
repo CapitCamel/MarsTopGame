@@ -15,10 +15,15 @@ public class DialogueSystem : MonoBehaviour {
     float timer;
     bool enter;
 
-	// Use this for initialization
-	void Start () {
+    public AudioSource audioSource;
+    public AudioClip currentAmbient;
+    public float volume = 0.5f;
+
+    // Use this for initialization
+    void Start () {
         GM = GameObject.Find("GameManegger").GetComponent<GameManeger>();
         timer = timeDelay;
+        audioSource = GetComponent<AudioSource>();
     }
 	
 	// Update is called once per frame
@@ -28,6 +33,7 @@ public class DialogueSystem : MonoBehaviour {
             if (timer > 0)
             {
                 timer -= Time.deltaTime;
+
             }
 
             if (timer <= 0)
@@ -35,6 +41,7 @@ public class DialogueSystem : MonoBehaviour {
                 timer = 0;
                 if (i <= dialogueText.Length)
                 {
+                    audioSource.PlayOneShot(currentAmbient, volume);
                     i++;
                     timer = timeDelay;
                 }
@@ -46,10 +53,12 @@ public class DialogueSystem : MonoBehaviour {
             }
             if (i < dialogueText.Length)
             {
+                
                 GM.dialoguePanel.GetComponentInChildren<Text>().text = dialogueText[i];
             }
             if (i == dialogueText.Length)
             {
+                audioSource.PlayOneShot(currentAmbient, volume);
                 GM.dialoguePanel.GetComponentInChildren<Text>().text = dialogueText[dialogueText.Length - 1];
             }
 
@@ -57,6 +66,7 @@ public class DialogueSystem : MonoBehaviour {
 
         if (GameManeger.openTutor && openT)
         {
+            
             GM.tutorPanel.GetComponentInChildren<Text>().text = openText;
         }
 
@@ -64,6 +74,7 @@ public class DialogueSystem : MonoBehaviour {
         {
             if (Input.GetButtonUp("inBut") && !open)
             {
+                audioSource.PlayOneShot(currentAmbient, volume);
                 open = true;
                 GameManeger.openDialogue = true;
                 GameManeger.openTutor = false;

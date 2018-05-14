@@ -21,13 +21,23 @@ public class CharacterControllerScript : MonoBehaviour {
 	//ссылка на слой, представляющий землю
 	public LayerMask whatIsGround;
 
-	/// <summary>
-	/// Начальная инициализация
-	/// </summary>
-	private void Start()
+    public AudioSource audioSource;
+    public AudioClip jumpClip;
+    public AudioClip walkClip;
+    public float volume = 0.7f;
+
+    public float timeWalkDelay = 0.44f;
+    float timer;
+
+    /// <summary>
+    /// Начальная инициализация
+    /// </summary>
+    private void Start()
 	{
 		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator>();
+
+        audioSource = GetComponent<AudioSource>();
 	}
 
 	/// <summary>
@@ -55,9 +65,30 @@ public class CharacterControllerScript : MonoBehaviour {
 		//приэтом нам нужен модуль значения
 		anim.SetFloat("speed", Mathf.Abs(move));
 
-		//обращаемся к компоненту персонажа RigidBody2D. задаем ему скорость по оси Х, 
-		//равную значению оси Х умноженное на значение макс. скорости
-		rb.velocity = new Vector2(move * maxSpeed, rb.velocity.y);
+        //обращаемся к компоненту персонажа RigidBody2D. задаем ему скорость по оси Х, 
+        //равную значению оси Х умноженное на значение макс. скорости
+
+        if (isGrounded) //звук хотьбы
+        {
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+            {
+                if (timer > 0)
+                {
+                    timer -= Time.deltaTime;
+                }
+
+                if (timer <= 0)
+                {
+                    audioSource.PlayOneShot(walkClip, volume);
+                    timer = timeWalkDelay;
+                }
+            }
+        }
+        
+
+        rb.velocity = new Vector2(move * maxSpeed, rb.velocity.y);
+
+
 
 		//если нажали клавишу для перемещения вправо, а персонаж направлен влево
 		if(move > 0 && !isFacingRight)
@@ -71,7 +102,10 @@ public class CharacterControllerScript : MonoBehaviour {
 	void Update(){
 		//если перс на земле и нажат пробел
 		if(isGrounded && Input.GetKeyDown (KeyCode.Space)){
-			anim.SetBool ("Ground", false);
+
+            audioSource.PlayOneShot(jumpClip, volume);
+
+            anim.SetBool ("Ground", false);
 			rb.AddForce (new Vector2 (0, 900));
 		}
 
@@ -91,4 +125,6 @@ public class CharacterControllerScript : MonoBehaviour {
 		//задаем новый размер персонажа, равный старому, но зеркально отраженный
 		transform.localScale = theScale;
 	}
+
+
 }
