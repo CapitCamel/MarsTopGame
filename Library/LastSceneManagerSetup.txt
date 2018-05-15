@@ -1,10 +1,10 @@
 sceneSetups:
 - path: Assets/_Scens/Menu.unity
-  isLoaded: 0
-  isActive: 0
+  isLoaded: 1
+  isActive: 1
 - path: Assets/_Scens/main.unity
   isLoaded: 0
   isActive: 0
 - path: Assets/_Scens/gameEnd.unity
   isLoaded: 1
-  isActive: 1
+  isActive: 0
