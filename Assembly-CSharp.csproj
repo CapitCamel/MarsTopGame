@@ -99,6 +99,7 @@
      <Compile Include="Assets\Scripts\GameManeger.cs" />
      <Compile Include="Assets\Scripts\grabberscript.cs" />
      <Compile Include="Assets\Scripts\LoadScript.cs" />
+     <Compile Include="Assets\Scripts\Parallax.cs" />
      <Compile Include="Assets\Scripts\RocketScript.cs" />
      <Compile Include="Assets\Scripts\SavebleObject.cs" />
      <Compile Include="Assets\Scripts\UIController.cs" />
