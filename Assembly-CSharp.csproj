@@ -100,6 +100,7 @@
      <Compile Include="Assets\Scripts\grabberscript.cs" />
      <Compile Include="Assets\Scripts\LoadScript.cs" />
      <Compile Include="Assets\Scripts\Parallax.cs" />
+     <Compile Include="Assets\Scripts\portalScript.cs" />
      <Compile Include="Assets\Scripts\RocketScript.cs" />
      <Compile Include="Assets\Scripts\SavebleObject.cs" />
      <Compile Include="Assets\Scripts\UIController.cs" />
@@ -122,12 +123,14 @@
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TileObject.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TmxObject.cs" />
      <None Include="Assets\Tiled2Unity\Shaders\shaDiffuseDepth-Instanced.shader" />
+     <None Include="Assets\Sprites\SciFiPlatformerTileset\Attribution &amp; Licence details.txt" />
      <None Include="Assets\Light2D\Resources\Shaders\FastBlur.shader" />
      <None Include="Assets\Tiled2Unity\Shaders\shaDefault.shader" />
      <None Include="Assets\Light2D\Resources\Shaders\Light70.shader" />
      <None Include="Assets\Tiled2Unity\Shaders\shaDepth-Instanced.shader" />
      <None Include="Assets\Tiled2Unity\Prefabs\_ReadMe.txt" />
      <None Include="Assets\Light2D\changelog.txt" />
+     <None Include="Assets\Sprites\LivingTissueTileset\Attribution &amp; Licence details.txt" />
      <None Include="Assets\Tiled2Unity\Shaders\Tiled2Unity.cginc" />
      <None Include="Assets\Light2D\Resources\Shaders\LightIgnoreObstacles.shader" />
      <None Include="Assets\Light2D\Resources\Shaders\NormalMap.shader" />
