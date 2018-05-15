@@ -5,3 +5,6 @@ sceneSetups:
 - path: Assets/_Scens/main.unity
   isLoaded: 1
   isActive: 1
+- path: Assets/_Scens/gameEnd.unity
+  isLoaded: 0
+  isActive: 0
