@@ -36,6 +36,11 @@ public class DialogueSystem : MonoBehaviour {
 
             }
 
+            if (Input.GetButtonUp("inBut"))
+            {
+                timer = 0;
+            }
+
             if (timer <= 0)
             {
                 timer = 0;
@@ -51,6 +56,7 @@ public class DialogueSystem : MonoBehaviour {
                     GameManeger.openDialogue = false;
                 }
             }
+
             if (i < dialogueText.Length)
             {
                 
@@ -58,7 +64,7 @@ public class DialogueSystem : MonoBehaviour {
             }
             if (i == dialogueText.Length)
             {
-                audioSource.PlayOneShot(currentAmbient, volume);
+                //audioSource.PlayOneShot(currentAmbient, volume);
                 GM.dialoguePanel.GetComponentInChildren<Text>().text = dialogueText[dialogueText.Length - 1];
             }
 
