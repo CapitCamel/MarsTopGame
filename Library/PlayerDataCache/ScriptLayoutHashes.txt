@@ -136,7 +136,7 @@ b81a6ddfdee8da973ba85b1a18d5d672 Assembly-CSharp.dll:Light2D.Examples.InputManag
 6bfc37582dd343e6247f038125e560af Assembly-CSharp.dll:Light2D.Examples.SimpleExamplesController
 d627dffdf28dca5bcaddd8fb1f9f2641 Assembly-CSharp.dll:Light2D.LightObstacleMesh
 a30d6c32d368d8b82584a24e46dfaf6a Assembly-CSharp.dll:Light2D.Examples.SortingOrderSetter
-c7a16be702e76c28347b06807becb5fc Assembly-CSharp.dll:.DialogueSystem
+a8cbbd91ba583c1a49b22000a038bc9f Assembly-CSharp.dll:.DialogueSystem
 c9cae0c7c9b239a4a0fa7971f2ff5171 Assembly-CSharp.dll:Light2D.LightSprite
 c5b77decb97ffc0c36e810b155d27dde Assembly-CSharp.dll:Tiled2Unity.TiledMap
 6c54f86d0f0e84538d88b37d5d137089 Assembly-CSharp.dll:.LoadScript
@@ -144,7 +144,7 @@ c5b77decb97ffc0c36e810b155d27dde Assembly-CSharp.dll:Tiled2Unity.TiledMap
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
 9075a9fbaa199e2fbd8b0bac593b86f7 Assembly-CSharp.dll:Light2D.Examples.Bat
 f149f24230a6358c2804c5fae71459a2 Assembly-CSharp.dll:Tiled2Unity.TileAnimator
-65e60cb5b68303d7e04e679dc352ef1f Assembly-CSharp.dll:.UIController
+42ae4e1bf8b6192f03739dd2fe22a22d Assembly-CSharp.dll:.UIController
 4201478eb995da75f5955c57ef9c9246 Assembly-CSharp.dll:.Parallax
 f2660cd826c47e09a9527b185f089e82 Assembly-CSharp.dll:Light2D.Examples.Flare
 2ffb2387ea2081b023529a31cc385d46 Assembly-CSharp.dll:.SavebleObject
@@ -201,5 +201,5 @@ ad0fccf85934946840932fafdb35ea17 Assembly-CSharp.dll:.FollowMouse
 23dc9c90959c1ae5ebbd21b3713e1b7a Assembly-CSharp.dll:Light2D.LightingSystemPrefabConfig
 f259a255b55401594ab1f38ac2ce5b82 Assembly-CSharp.dll:.Ambient
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.dieScript
-c678aeed939c33927b1131852b5b8196 Assembly-CSharp.dll:.RocketScript
+3416308079ab45f90b7138f23ddddc26 Assembly-CSharp.dll:.RocketScript
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:Light2D.Examples.ButtonHelper

@@ -7,9 +7,14 @@ using UnityEngine.UI;
 public class UIController : MonoBehaviour {
 
     public Text CoinsText;
-   
+    public RocketScript RS;
+
+    void Start()
+    {
+        RS = GameObject.Find("Rockets").GetComponent<RocketScript>();
+    }
 
     void Update () {
-		CoinsText.text =GameManeger.coins.ToString ();
+		CoinsText.text = RS.playerArtQuantity.ToString () + "/3";
 	}
 }

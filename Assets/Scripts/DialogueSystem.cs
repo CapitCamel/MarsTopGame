@@ -10,7 +10,7 @@ public class DialogueSystem : MonoBehaviour {
     GameManeger GM;
     public bool open;
     public bool openT;
-    private int i;
+    public int i;
     public float timeDelay;
     float timer;
     bool enter;
