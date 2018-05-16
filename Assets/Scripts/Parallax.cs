@@ -31,7 +31,7 @@ public class Parallax : MonoBehaviour {
 
             backgrounds[i].position = new Vector3(backgrounds[i].position.x + parallax.x, backgrounds[i].position.y + parallax.y, backgrounds[i].position.z);
 
-        }
+    }
 
 
         previosCameraPosition = transform.position;

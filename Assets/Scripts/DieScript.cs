@@ -6,10 +6,22 @@ using UnityEngine.SceneManagement;
 
 public class DieScript : MonoBehaviour {
 
-	void OnTriggerEnter2D(Collider2D col){
-		if (col.gameObject.tag == "Player")
-			GameManeger.dead = true;
-	}
+    public GameObject destination;
+
+
+   
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            col.transform.position = destination.transform.position;
+            //GameManeger.fakeDead = true;
+
+
+        }
+
+    }
 		
-	}
+}
 
