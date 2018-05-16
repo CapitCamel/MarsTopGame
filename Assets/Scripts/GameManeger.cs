@@ -7,6 +7,7 @@ public class GameManeger : MonoBehaviour {
 
 	public static int coins;
 	public static bool dead;
+    public static bool fakeDead;
     public static bool openDialogue;
     public static bool openTutor;
     public static bool flashOn;
@@ -27,12 +28,12 @@ public class GameManeger : MonoBehaviour {
 
 	void Update () {
 		//DontDestroyOnLoad (this.gameObject);
-	
+	    /*
 		if (dead) {
 			SceneManager.LoadScene (2);
 			dead = false;
 		}
-
+        */
         dialoguePanel.SetActive(openDialogue);
         tutorPanel.SetActive(openTutor);
         heroFlash.SetActive(flashOn);

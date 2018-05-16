@@ -94,6 +94,8 @@
      <Compile Include="Assets\Scripts\Dialogue.cs" />
      <Compile Include="Assets\Scripts\DialogueSystem.cs" />
      <Compile Include="Assets\Scripts\DieScript.cs" />
+     <Compile Include="Assets\Scripts\EnemyController.cs" />
+     <Compile Include="Assets\Scripts\EnemyTargetOnPlayer.cs" />
      <Compile Include="Assets\Scripts\FollowMouse.cs" />
      <Compile Include="Assets\Scripts\GameHalper.cs" />
      <Compile Include="Assets\Scripts\GameManeger.cs" />
