@@ -372,6 +372,8 @@
     <None Include="Assets\Light2D\Resources\Shaders\TransparentDualColorNormalMapped.shader" />
     <None Include="Assets\Light2D\Resources\Shaders\TransparentNormalMapped.shader" />
     <None Include="Assets\Light2D\changelog.txt" />
+    <None Include="Assets\Sprites\LivingTissueTileset\Attribution &amp; Licence details.txt" />
+    <None Include="Assets\Sprites\SciFiPlatformerTileset\Attribution &amp; Licence details.txt" />
     <None Include="Assets\Tiled2Unity\Imported\_ReadMe.txt" />
     <None Include="Assets\Tiled2Unity\Imported\map.tiled2unity.xml" />
     <None Include="Assets\Tiled2Unity\License.txt" />
