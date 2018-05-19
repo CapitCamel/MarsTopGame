@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class EnemyHP : MonoBehaviour {
 
-    public int maxHP;
-    public static int HP;
+    public int maxHP = 100;
+    public int HP;
+    public static bool dead = false;
     
 
 
     void Start()
     {
-        maxHP = 100;
         HP = maxHP;
     }
 
@@ -20,7 +20,11 @@ public class EnemyHP : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.P))
             HP -= 30;
+
         if (HP <= 0)
-            Destroy(gameObject);
+
+            dead = true;
+
+        Destroy(gameObject);
     }
 }

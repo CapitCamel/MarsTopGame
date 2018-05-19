@@ -41,6 +41,8 @@ public class DialogueSystem : MonoBehaviour {
                 timer = 0;
             }
 
+            
+
             if (timer <= 0)
             {
                 timer = 0;
@@ -80,10 +82,26 @@ public class DialogueSystem : MonoBehaviour {
         {
             if (Input.GetButtonUp("inBut") && !open)
             {
-                audioSource.PlayOneShot(currentAmbient, volume);
-                open = true;
-                GameManeger.openDialogue = true;
-                GameManeger.openTutor = false;
+               
+
+                if (Input.GetButtonUp("inBut") && i == dialogueText.Length)
+                {
+                    open = false;
+                    GameManeger.openDialogue = false;
+                }
+                else
+
+                {
+                    Debug.Log("Enter is" + enter);
+
+                    audioSource.PlayOneShot(currentAmbient, volume);
+                    open = true;
+                    GameManeger.openDialogue = true;
+                    GameManeger.openTutor = false;
+
+                }
+
+
             }
         }
     }
@@ -94,6 +112,9 @@ public class DialogueSystem : MonoBehaviour {
     {
         if (col.gameObject.name == "Character")
         {
+
+            Debug.Log("Enter is" + enter);
+
             openT = true;
             GameManeger.openTutor = true;
             enter = true;
@@ -102,12 +123,23 @@ public class DialogueSystem : MonoBehaviour {
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        i = 0;
-        openT = false;
-        open = false;
-        GameManeger.openTutor = false;
-        GameManeger.openDialogue = false;
-        enter = false;
+        if (collision.gameObject.name == "Character")
+        {
+            i = 0;
+            openT = false;
+            open = false;
+            GameManeger.openTutor = false;
+            GameManeger.openDialogue = false;
+
+
+            Debug.Log("Enter = " + enter);
+            Debug.Log("collision = " + collision.gameObject.name);
+
+
+
+            enter = false;
+
+        }
     }
 
 

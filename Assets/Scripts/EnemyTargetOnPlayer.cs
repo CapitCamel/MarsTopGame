@@ -8,7 +8,11 @@ public class EnemyTargetOnPlayer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        EC = GameObject.Find("Enemy").GetComponent<EnemyController>();
+
+
+        EC = GetComponentInParent<EnemyController>();
+
+        //EC = GameObject.Find("Enemy").GetComponent<EnemyController>();
     }
 	
 	// Update is called once per frame
@@ -18,11 +22,16 @@ public class EnemyTargetOnPlayer : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Player")
+        if (!EC.dead)
         {
-            EC.PatrolPoints[0].position = GameObject.Find("EnemyFollowPoint").transform.position;
-            EC.PatrolPoints[1].position = GameObject.Find("EnemyFollowPoint").transform.position;
+
+            if ( col.gameObject.tag == "Player")
+            {
+                EC.PatrolPoints[0].position = GameObject.Find("EnemyFollowPoint").transform.position;
+                EC.PatrolPoints[1].position = GameObject.Find("EnemyFollowPoint").transform.position;
+            }
         }
+
     }
 
 

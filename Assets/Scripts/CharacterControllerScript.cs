@@ -90,14 +90,20 @@ public class CharacterControllerScript : MonoBehaviour {
 
 
 
-		//если нажали клавишу для перемещения вправо, а персонаж направлен влево
-		if(move > 0 && !isFacingRight)
-			//отражаем персонажа вправо
-			Flip();
-		//обратная ситуация. отражаем персонажа влево
-		else if (move < 0 && isFacingRight)
-			Flip();
-	}
+        //если нажали клавишу для перемещения вправо, а персонаж направлен влево
+        if (move > 0 && !isFacingRight)
+        //отражаем персонажа вправо
+        {
+            Flip();
+            GameManeger.heroWasFliped = true;
+        }
+        //обратная ситуация. отражаем персонажа влево
+        else if (move < 0 && isFacingRight)
+        {
+            Flip();
+            GameManeger.heroWasFliped = true;
+        }
+    }
 
 	void Update(){
 		//если перс на земле и нажат пробел
