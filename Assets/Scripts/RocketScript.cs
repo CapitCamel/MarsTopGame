@@ -11,7 +11,7 @@ public class RocketScript : MonoBehaviour {
     public AudioClip currentMessage;
     public AudioClip endMusic;
     public float volume = 0.7f;
-    private bool played;
+    private bool played = false;
     public string levelToLoad;
 
     DialogueSystem DS;
@@ -72,11 +72,14 @@ public class RocketScript : MonoBehaviour {
     {
         if (DS.i == 3 && playerArtQuantity == 3 && !played)
         {
-
-            SceneManager.LoadScene(levelToLoad);
-            SceneManager.UnloadSceneAsync("main");
+            
+            SceneManager.LoadScene(2);
 
             played = !played;
+
+            SceneManager.UnloadSceneAsync("main");
+
+
         }
     }
 

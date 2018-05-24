@@ -14,6 +14,7 @@ public class GameManeger : MonoBehaviour {
     public GameObject tutorPanel;
     public GameObject dialoguePanel;
     public GameObject heroFlash;
+    public static bool heroWasFliped;
 
 	void Start () {
 
